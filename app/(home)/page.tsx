@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/container";
-import PlatformCarousel from "./_components/platform-carousel";
+import { PlatformCarousel } from "./_components/platform-carousel";
 
 export default function Home() {
   return (
