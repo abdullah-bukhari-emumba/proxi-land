@@ -16,10 +16,10 @@ module.exports = {
         "accent-1": "var(--accent-1)",
         "accent-2": "var(--accent-2)",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "var(--primary)",
           light: "var(--primary-light)",
           dark: "var(--primary-dark)",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "var(--primary-foreground)",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

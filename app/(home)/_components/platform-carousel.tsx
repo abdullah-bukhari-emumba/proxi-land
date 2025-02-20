@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+
 import { SectionHeader } from "./section-header";
+import { SectionWrapper } from "./section-wrapper";
 
 const slides = [
   {
@@ -76,7 +78,7 @@ export const PlatformCarousel = () => {
   }, [isAnimating, nextSlide]);
 
   return (
-    <section className="w-full">
+    <SectionWrapper>
       <div className="flex flex-col gap-3xl">
         <SectionHeader
           subtitle="Platform overview"
@@ -144,6 +146,6 @@ export const PlatformCarousel = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

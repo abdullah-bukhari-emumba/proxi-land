@@ -1,25 +1,22 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/logo.svg";
- 
-import { Button } from "@/components/ui/button"
+
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/layout/container";
 
 export default function Header() {
-    return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
-        <div className="container flex px-24 h-16 items-center justify-between">
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+      <Container>
+        <div className="flex px-24 h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image
-              src={logo}
-              alt="Proximatly Logo"
-              width={128}
-              height={128}
-            />
+            <Image src={logo} alt="Proximatly Logo" width={128} height={128} />
             {/* <span className="font-semibold">Proximatly</span> */}
           </div>
-            <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             <Link href="#" className="text-sm text-black hover:text-purple-600">
               Product
             </Link>
@@ -32,9 +29,10 @@ export default function Header() {
             <Link href="#" className="text-sm text-black hover:text-purple-600">
               Contact
             </Link>
-            </nav>
-          <Button className="bg-purple-600 hover:bg-purple-700">Get in touch</Button>
+          </nav>
+          <Button>Get in touch</Button>
         </div>
-      </header>
-    )
+      </Container>
+    </header>
+  );
 }
