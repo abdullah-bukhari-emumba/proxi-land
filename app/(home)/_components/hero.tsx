@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image';
-import { Button } from '@/components/layout/button'
+import { Button } from '@/components/ui/button'
+import heroImage from '../../../public/hero.png'
 
 export default function Hero() {
  return (
@@ -15,11 +16,11 @@ export default function Hero() {
         Simply describe what you need, and Proximatlys platform will build a fully functional AI workforce that
         grows, performs, and helps with your business.
       </p>
-      <Button className="border:  hover:bg-purple-700">Learn more</Button>
+      <Button className="border-2 border-purple-600 bg-transparent text-purple-600 hover:bg-purple-700 hover:text-white">Learn more</Button>
 
       <div className="mt-12 rounded-2xl overflow-hidden">
         <Image
-          src="/../../../public/hero.png"
+          src={heroImage}
           alt="Platform Dashboard"
           width={1200}
           height={675}
