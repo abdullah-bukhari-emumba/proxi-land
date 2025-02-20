@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/container";
 import { SectionWrapper } from "./section-wrapper";
 import heroImage from "../../../public/hero.png";
 
-export default function Hero() {
+export const HeroSection = () => {
   return (
     <SectionWrapper classname="pt-32 pb-md bg-primary-light">
       <Container classname="text-center flex flex-col gap-xl">
@@ -38,4 +38,4 @@ export default function Hero() {
       </Container>
     </SectionWrapper>
   );
-}
+};
