@@ -75,13 +75,13 @@ export default function PlatformCarousel() {
   }, [isAnimating, nextSlide]);
 
   return (
-    <section className="w-full py-12 md:py-24">
+    <section className="w-full">
       <div className="flex flex-col gap-3xl">
         <div className="flex flex-col gap-md">
-          <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase">
+          <p className="text-sm text-muted-foreground uppercase">
             PLATFORM OVERVIEW
           </p>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl">
             Don&apos;t settle for complex AI platforms
           </h2>
           <p className="text-accent-2 max-w-[700px]">
@@ -93,24 +93,22 @@ export default function PlatformCarousel() {
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden rounded-md border border-primary bg-background p-6 shadow-lg">
-            <div className="grid gap-sm md:grid-cols-2 md:gap-md">
-              <div className="flex flex-col gap-xs justify-between">
+          <div className="overflow-hidden rounded-md border border-primary shadow-lg p-sm">
+            <div className="grid md:grid-cols-2 gap-3xl">
+              <div className="flex flex-col gap-xs justify-between p-xl">
                 <div className="flex flex-col gap-sm">
-                  <p className="text-sm font-medium tracking-wider text-accent-1 uppercase">
+                  <p className="text-sm text-accent-1 uppercase">
                     {slides[currentSlide].label}
                   </p>
-                  <h3 className="text-2xl font-bold text-accent-1 tracking-tighter sm:text-3xl">
-                    {slides[currentSlide].title}
-                  </h3>
-                  <p className="text-accent-2 md:text-lg/relaxed">
+                  <h3 className="text-3xl">{slides[currentSlide].title}</h3>
+                  <p className="text-accent-2 text-lg">
                     {slides[currentSlide].description}
                   </p>
                 </div>
 
                 <div>
                   <div className="flex items-center gap-sm">
-                    <div className="h-1 flex-1 bg-primary-light">
+                    <div className="h-1 bg-primary-light w-full">
                       <div
                         className="h-full bg-gradient-1 transition-all duration-500 ease-in-out"
                         style={{
@@ -139,7 +137,7 @@ export default function PlatformCarousel() {
                   </div>
                 </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-lg">
+              <div className="relative aspect-video overflow-hidden rounded-sm">
                 <Image
                   src={slides[currentSlide].image || "/placeholder.svg"}
                   alt="Platform screenshot"
