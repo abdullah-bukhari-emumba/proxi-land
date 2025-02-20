@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { SectionHeader } from "./section-header";
 
 const slides = [
   {
@@ -34,7 +35,7 @@ const slides = [
   },
 ];
 
-export default function PlatformCarousel() {
+export const PlatformCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -77,21 +78,14 @@ export default function PlatformCarousel() {
   return (
     <section className="w-full">
       <div className="flex flex-col gap-3xl">
-        <div className="flex flex-col gap-md">
-          <p className="text-sm text-muted-foreground uppercase">
-            PLATFORM OVERVIEW
-          </p>
-          <h2 className="text-3xl">
-            Don&apos;t settle for complex AI platforms
-          </h2>
-          <p className="text-accent-2 max-w-[700px]">
-            Express your intent and have your Multi-Agent system created for
+        <SectionHeader
+          subtitle="Platform overview"
+          title="Don't settle for complex AI platforms"
+          description="Express your intent and have your Multi-Agent system created for
             you. Productivity is a cutting-edge platform that allows businesses
             to automate, optimize, and scale business solutions by just
-            describing what they need.
-          </p>
-        </div>
-
+            describing what they need."
+        />
         <div className="relative">
           <div className="overflow-hidden rounded-md border border-primary shadow-lg p-sm">
             <div className="grid md:grid-cols-2 gap-3xl">
@@ -152,4 +146,4 @@ export default function PlatformCarousel() {
       </div>
     </section>
   );
-}
+};
