@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/logo.svg";
+import Logo from "../../../public/logo.svg";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
@@ -13,7 +12,7 @@ export default function Header() {
       <Container>
         <div className="flex px-24 h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src={logo} alt="Proximatly Logo" width={128} height={128} />
+            <Logo />
             {/* <span className="font-semibold">Proximatly</span> */}
           </div>
           <nav className="hidden md:flex items-center gap-8">

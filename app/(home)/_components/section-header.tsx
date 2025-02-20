@@ -18,15 +18,15 @@ export const SectionHeader = ({
   return (
     <div
       className={cn(
-        "flex flex-col gap-md",
+        "flex flex-col gap-md max-w-[800px] mx-auto",
         centered ? "items-center text-center" : ""
       )}
     >
       {subtitle && (
         <p className="text-sm text-accent-1 uppercase">{subtitle}</p>
       )}
-      <h2 className="text-3xl">{title}</h2>
-      <p className="text-accent-2 max-w-[700px]">{description}</p>
+      <h2 className="leading-normal">{title}</h2>
+      <p className="text-accent-2 max-w-[500px] mx-auto">{description}</p>
     </div>
   );
 };

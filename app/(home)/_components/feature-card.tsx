@@ -14,10 +14,10 @@ export const FeatureCard = ({
   className = "",
 }: FeatureCardProps) => {
   return (
-    <div className={`flex gap-md text-left ${className}`}>
-      {icon && <span className="rounded-xs p-xs">{icon}</span>}
+    <div className={`flex items-start gap-md text-left ${className}`}>
+      {icon && <span className="rounded-sm p-sm bg-primary">{icon}</span>}
       <div className="flex flex-col gap-sm">
-        <h3>{title}</h3>
+        <h6 className="font-semibold">{title}</h6>
         <p>{description}</p>
       </div>
     </div>

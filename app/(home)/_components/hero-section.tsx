@@ -12,7 +12,7 @@ export const HeroSection = () => {
     <SectionWrapper classname="pt-32 pb-md bg-primary-light">
       <Container classname="text-center flex flex-col gap-xl">
         <div className="flex flex-col justify-center items-center gap-md">
-          <h1>
+          <h1 className="leading-tight">
             Build AI Workforce
             <span className="block text-purple-600">
               at the speed of thought

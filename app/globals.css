@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --base: #ffffff;
+    --base-1: #ffffff;
     --base-2: #f7f6ff;
 
     --accent-1: #070224;
     --accent-2: #373544;
 
     --primary: #5842cb;
-    --primary-light: #eae7ff;
-    --primary-dark: #4535a3;
+    --primary-light: #f7f6ff;
+    --primary-muted: #4535a3;
 
     --gradient-1: linear-gradient(89.29deg, #5842cb 0.3%, #bf2bf3 99.7%);
 
@@ -32,12 +32,12 @@
     --text-xs: 0.75rem; /* 12px */
     --text-sm: 0.875rem; /* 14px */
     --text-md: 1rem; /* 16px */
-    --text-lg: 1.125rem; /* 18px */
-    --text-xl: 1.25rem; /* 20px */
-    --text-2xl: 1.5rem; /* 24px */
-    --text-3xl: 1.75rem; /* 28px */
-    --text-4xl: 2rem; /* 32px */
-    --text-5xl: 3rem; /* 48px */
+    --text-lg: 1.25rem; /* 20px */
+    --text-xl: 1.5rem; /* 24px */
+    --text-2xl: 1.75rem; /* 28px */
+    --text-3xl: 2rem; /* 32px */
+    --text-4xl: 2.5rem; /* 40px */
+    --text-5xl: 3.125rem; /* 50px */
 
     --background: var(--base);
     --foreground: 240 10% 3.9%;
@@ -48,11 +48,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary-foreground: var(--base);
+    --primary-foreground: var(--base-1);
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 240 4.8% 95.9%;
+    --muted: rgba(89, 66, 203, 0.05);
     --muted-foreground: 240 3.8% 46.1%;
 
     --accent: 240 4.8% 95.9%;
@@ -89,22 +89,46 @@
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     font-weight: 600;
+    line-height: 1.25;
   }
 
-  h1,
+  h1 {
+    font-size: var(--text-3xl);
+    @apply md:text-4xl lg:text-5xl;
+  }
+
   h2 {
-    line-height: 45px;
+    font-size: var(--text-2xl);
+    @apply md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+    @apply md:text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    font-size: var(--text-lg);
+    @apply md:text-xl lg:text-2xl;
+  }
+
+  h5 {
+    font-size: var(--text-md);
+    @apply md:text-lg lg:text-xl;
+  }
+
+  h6 {
+    font-size: var(--text-sm);
+    @apply md:text-base lg:text-lg;
   }
 
   p {
     line-height: 24px;
     font-size: var(--text-md);
-  }
-
-  h1 {
-    font-size: var(--text-4xl);
   }
 
   .dark {

@@ -91,7 +91,7 @@ export const PlatformCarousel = () => {
         <div className="relative">
           <div className="overflow-hidden rounded-md border border-primary shadow-lg p-sm">
             <div className="grid md:grid-cols-2 gap-3xl">
-              <div className="flex flex-col gap-xs justify-between p-xl">
+              <div className="flex flex-col md:gap-xs gap-lg justify-between p-xl order-2 md:order-1">
                 <div className="flex flex-col gap-sm">
                   <p className="text-sm text-accent-1 uppercase">
                     {slides[currentSlide].label}
@@ -133,7 +133,7 @@ export const PlatformCarousel = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-sm">
+              <div className="relative aspect-video overflow-hidden rounded-sm order-1 md:order-2">
                 <Image
                   src={slides[currentSlide].image || "/placeholder.svg"}
                   alt="Platform screenshot"

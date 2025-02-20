@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        base: "var(--base)",
+        "base-1": "var(--base-1)",
         "base-2": "var(--base-2)",
         "accent-1": "var(--accent-1)",
         "accent-2": "var(--accent-2)",
@@ -41,7 +41,7 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
+          DEFAULT: "var(--muted)",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {

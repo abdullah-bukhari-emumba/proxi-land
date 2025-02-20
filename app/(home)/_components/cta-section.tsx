@@ -1,28 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "./section-wrapper";
+import CTAVector from "../../../public/home/cta-vector.svg";
 
 export const CTASection = () => {
   return (
     <SectionWrapper>
-      <div className="bg-primary rounded-2xl p-12 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -right-20 -top-20 size-80 bg-white rounded-full transform rotate-45" />
-          <div className="absolute -left-20 -bottom-20 size-80 bg-white rounded-full" />
+      <div className="bg-primary rounded-2xl py-3xl px-xl lg:px-[128px] text-base-1 relative overflow-hidden grid md:grid-cols-2">
+        <div className="flex flex-col gap-xl items-start relative z-20 bg-primary max-w-[400px]">
+          <div className="flex flex-col gap-md">
+            <h2>Build your Agentic worforce with ease</h2>
+            <p>
+              Ready to discover how Proximatly can help your business scale with
+              AI? Lets talk.
+            </p>
+          </div>
+          <Button variant="secondary">Book a demo</Button>
         </div>
-        <div className="relative">
-          <h2 className="text-3xl font-bold mb-4">
-            Build your Agentic
-            <br />
-            worforce with ease
-          </h2>
-          <p className="mb-8 text-purple-100">
-            Ready to discover how Proximatly can help your
-            <br />
-            business scale with AI? Lets talk.
-          </p>
-          <Button className="bg-white text-primary hover:bg-purple-50">
-            Book a demo
-          </Button>
+        <div className="relative md:block hidden z-10">
+          <CTAVector className="absolute -top-[70px] -right-[130px]" />
         </div>
       </div>
     </SectionWrapper>
