@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import { PlayIcon } from "lucide-react";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { SectionWrapper } from "./section-wrapper";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import heroImage from "../../../public/hero.png";
-import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { PlayIcon } from "lucide-react";
+import heroImage from "../../../public/home/hero.png";
 
 export const HeroSection = () => {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -36,18 +36,20 @@ export const HeroSection = () => {
           className="rounded-2xl overflow-hidden relative group cursor-pointer"
           onClick={() => setVideoOpen(true)}
         >
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <PlayIcon className="w-8 h-8 text-purple-600 ml-1" />
+          <div className="absolute inset-0 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+              <PlayIcon className="w-8 h-8 text-base-1 ml-1" />
             </div>
           </div>
-          <Image
-            src={heroImage}
-            alt="Platform Dashboard"
-            width={1200}
-            height={675}
-            className="w-full"
-          />
+          <div>
+            <Image
+              src={heroImage}
+              alt="Platform Dashboard"
+              width={1200}
+              height={675}
+              className="w-full"
+            />
+          </div>
         </div>
         <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
           <DialogContent className="max-w-4xl p-0">
