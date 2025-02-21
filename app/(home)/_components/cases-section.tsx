@@ -140,14 +140,16 @@ export const CasesSection = () => {
         />
 
         <Tabs defaultValue="marketing" className="flex flex-col gap-3xl">
-          <TabsList className="flex gap-sm rounded-full w-fit mx-auto">
-            <TabsTrigger value="marketing">Marketing</TabsTrigger>
-            <TabsTrigger value="sales">Sales</TabsTrigger>
-            <TabsTrigger value="hr">HR</TabsTrigger>
-            <TabsTrigger value="operations">Operations</TabsTrigger>
-            <TabsTrigger value="legal">Legal</TabsTrigger>
-            <TabsTrigger value="research">Research</TabsTrigger>
-          </TabsList>
+          <div className="overflow-x-auto">
+            <TabsList className="flex gap-sm rounded-full w-fit mx-auto">
+              <TabsTrigger value="marketing">Marketing</TabsTrigger>
+              <TabsTrigger value="sales">Sales</TabsTrigger>
+              <TabsTrigger value="hr">HR</TabsTrigger>
+              <TabsTrigger value="operations">Operations</TabsTrigger>
+              <TabsTrigger value="legal">Legal</TabsTrigger>
+              <TabsTrigger value="research">Research</TabsTrigger>
+            </TabsList>
+          </div>
 
           {Object.entries(tabs).map(([category, items]) => (
             <TabsContent key={category} value={category}>
