@@ -132,22 +132,46 @@ const tabs = {
 export const CasesSection = () => {
   return (
     <SectionWrapper id="usecase" classname="bg-primary-light">
-      <div className="flex flex-col gap-xl">
+      <div
+        id="usecases"
+        className="flex flex-col gap-xl"
+        style={{ maxWidth: "-webkit-fill-available" }}
+      >
         <SectionHeader
           title="Use Cases"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing eli"
           centered
         />
 
-        <Tabs defaultValue="marketing" className="flex flex-col gap-3xl">
-          <div className="overflow-x-auto">
-            <TabsList className="flex gap-sm rounded-full w-fit mx-auto">
-              <TabsTrigger value="marketing">Marketing</TabsTrigger>
-              <TabsTrigger value="sales">Sales</TabsTrigger>
-              <TabsTrigger value="hr">HR</TabsTrigger>
-              <TabsTrigger value="operations">Operations</TabsTrigger>
-              <TabsTrigger value="legal">Legal</TabsTrigger>
-              <TabsTrigger value="research">Research</TabsTrigger>
+        <Tabs
+          defaultValue="marketing"
+          className="flex flex-col gap-3xl max-w-fill-available"
+          style={{ maxWidth: "-webkit-fill-available" }}
+        >
+          <div className="w-full overflow-x-auto md:overflow-visible xs:overflow-x-auto">
+            <TabsList
+              className="flex gap-xs rounded-full w-max md:w-fit mx-auto min-w-full md:min-w-0 xs: min-w-0 xs:max-w-xs xs:px-0 px-4 md:px-0"
+              style={{ maxWidth: "-webkit-fill-available" }}
+            >
+              <TabsTrigger value="marketing" className="flex-shrink-0 xs:text-xs"
+              >
+                Marketing
+              </TabsTrigger>
+              <TabsTrigger value="sales" className="flex-shrink-0 xs:text-xs">
+                Sales
+              </TabsTrigger>
+              <TabsTrigger value="hr" className="flex-shrink-0 xs:text-xs">
+                HR
+              </TabsTrigger>
+              <TabsTrigger value="operations" className="flex-shrink-0 xs:text-xs">
+                Operations
+              </TabsTrigger>
+              <TabsTrigger value="legal" className="flex-shrink-0 xs:text-xs">
+                Legal
+              </TabsTrigger>
+              <TabsTrigger value="research" className="flex-shrink-0 xs:text-xs">
+                Research
+              </TabsTrigger>
             </TabsList>
           </div>
 
