@@ -14,26 +14,23 @@ const slides = [
     title: "Build complex AI workforce over conversations",
     description:
       "Describe your needs and our platform will build highly skilled and efficient agent to automate using an extensive library of tools and integrations.",
-    image:
-      "https://images.unsplash.com/photo-1739946544837-266f0d1d1590?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/home/platform-overview-slide-workflow.png",
   },
   {
     id: 2,
-    label: "AUTOMATION",
-    title: "Automate repetitive tasks with AI",
+    label: "GOVERNANCE",
+    title: "Ensure compliance for your AI workforce",
     description:
-      "Let AI handle your routine tasks while you focus on strategic decisions and creative work.",
-    image:
-      "https://images.unsplash.com/photo-1735292626225-eb75b91f2ba2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Adhere to industry regulations and ethical AI standards through secure management of your AI workforce.",
+    image: "/home/platform-overview-slide-governance.png",
   },
   {
     id: 3,
-    label: "INTEGRATION",
-    title: "Seamless integration with your tools",
+    label: "INTEGRATIONS",
+    title: "Integrate with your data and SaaS agents",
     description:
-      "Connect with your existing workflow tools and enhance productivity without disrupting your current setup.",
-    image:
-      "https://images.unsplash.com/photo-1735348061620-81cf27a5b6ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Maximize the value of your existing investments in SaaS applications and data management platforms.",
+    image: "/home/platform-overview-slide-integrations.png",
   },
 ];
 
@@ -69,7 +66,7 @@ export const PlatformCarousel = () => {
     if (!isAnimating) {
       intervalId = setInterval(() => {
         nextSlide();
-      }, 5000);
+      }, 2500);
     }
 
     return () => {
@@ -78,20 +75,17 @@ export const PlatformCarousel = () => {
   }, [isAnimating, nextSlide]);
 
   return (
-    <SectionWrapper>
+    <SectionWrapper id="platform">
       <div className="flex flex-col gap-3xl">
         <SectionHeader
           subtitle="Platform overview"
           title="Don't settle for complex AI platforms"
-          description="Express your intent and have your Multi-Agent system created for
-            you. Productivity is a cutting-edge platform that allows businesses
-            to automate, optimize, and scale business solutions by just
-            describing what they need."
+          description="Express your intent and have your Multi-Agentic workforce curated for you. Proximality is a cutting-edge platform that allows businesses to automate, optimize, and scale business workflows by just describing what they need."
         />
         <div className="relative">
           <div className="overflow-hidden rounded-md border border-primary shadow-lg p-sm">
             <div className="grid md:grid-cols-2 gap-3xl">
-              <div className="flex flex-col md:gap-xs gap-lg justify-between p-xl order-2 md:order-1">
+              <div className="flex flex-col md:gap-xs gap-lg justify-between md:p-xl p-sm order-2 md:order-1">
                 <div className="flex flex-col gap-sm">
                   <p className="text-sm text-accent-1 uppercase">
                     {slides[currentSlide].label}
@@ -104,9 +98,9 @@ export const PlatformCarousel = () => {
 
                 <div>
                   <div className="flex items-center gap-sm">
-                    <div className="h-1 bg-primary-light w-full">
+                    <div className="h-2 rounded-full overflow-hidden bg-primary-light w-full">
                       <div
-                        className="h-full bg-gradient-1 transition-all duration-500 ease-in-out"
+                        className="h-full bg-gradient-2 transition-all duration-500 ease-in-out"
                         style={{
                           width: `${
                             ((currentSlide + 1) / slides.length) * 100

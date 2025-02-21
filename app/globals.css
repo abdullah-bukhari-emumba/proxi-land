@@ -12,9 +12,10 @@
 
     --primary: #5842cb;
     --primary-light: #f7f6ff;
-    --primary-muted: #4535a3;
+    --primary-dark: #4535a3;
 
     --gradient-1: linear-gradient(89.29deg, #5842cb 0.3%, #bf2bf3 99.7%);
+    --gradient-2: linear-gradient(90deg, #c3b8fe 0%, #5842cb 100%);
 
     --spacing-xs: 0.25rem; /* 4px */
     --spacing-sm: 0.5rem; /* 8px */
@@ -78,6 +79,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+  }
+
+  body,
+  html {
+    scroll-behavior: smooth;
   }
 
   a {

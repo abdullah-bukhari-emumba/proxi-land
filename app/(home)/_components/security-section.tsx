@@ -43,12 +43,13 @@ const cards = [
 
 export const SecuritySection = () => {
   return (
-    <SectionWrapper classname="text-center">
+    <SectionWrapper id="security" classname="text-center">
       <div className="flex flex-col gap-3xl">
         <SectionHeader
           title="Oversee & Secure your AI Workforce with Confidence"
           description="We prioritize security and compliance, are GDPR ready, and put you in control of your data storage"
           subtitle="security"
+          centered
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2xl">
           {cards.map((feature, i) => (

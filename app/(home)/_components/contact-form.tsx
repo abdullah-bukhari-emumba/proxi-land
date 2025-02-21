@@ -10,7 +10,10 @@ import YoutubeIcon from "../../../public/icons/youtube-icon.svg";
 
 export const ContactForm = () => {
   return (
-    <SectionWrapper classname="max-w-[1140px] mx-auto lg:p-[64px] p-0">
+    <SectionWrapper
+      id="contact"
+      classname="max-w-[1140px] mx-auto lg:p-[64px] p-0"
+    >
       <div className="grid md:grid-cols-2 gap-xl">
         <div className="flex flex-col gap-lg">
           <div className="flex flex-col gap-sm">

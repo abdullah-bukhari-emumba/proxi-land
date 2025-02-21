@@ -5,9 +5,15 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { SectionWrapper } from "./section-wrapper";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import heroImage from "../../../public/hero.png";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { PlayIcon } from "lucide-react";
 
 export const HeroSection = () => {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <SectionWrapper classname="pt-32 pb-md bg-primary-light">
       <Container classname="text-center flex flex-col gap-xl">
@@ -26,7 +32,15 @@ export const HeroSection = () => {
           <Button variant="outline">Learn more</Button>
         </div>
 
-        <div className="rounded-2xl overflow-hidden">
+        <div
+          className="rounded-2xl overflow-hidden relative group cursor-pointer"
+          onClick={() => setVideoOpen(true)}
+        >
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+              <PlayIcon className="w-8 h-8 text-purple-600 ml-1" />
+            </div>
+          </div>
           <Image
             src={heroImage}
             alt="Platform Dashboard"
@@ -35,6 +49,21 @@ export const HeroSection = () => {
             className="w-full"
           />
         </div>
+        <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+          <DialogContent className="max-w-4xl p-0">
+            <VisuallyHidden>
+              <DialogTitle>Hero Section Video</DialogTitle>
+            </VisuallyHidden>
+            <div className="relative pt-[56.25%]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/6zHFNjK-QiQ?si=7K6jMeS-q6ww6jJo?autoplay=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </DialogContent>
+        </Dialog>
       </Container>
     </SectionWrapper>
   );

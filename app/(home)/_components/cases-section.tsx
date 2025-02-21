@@ -111,7 +111,7 @@ const tabs = {
 
 export const CasesSection = () => {
   return (
-    <SectionWrapper classname="bg-primary-light">
+    <SectionWrapper id="usecase" classname="bg-primary-light">
       <div className="flex flex-col gap-xl">
         <SectionHeader
           title="Use Cases"
