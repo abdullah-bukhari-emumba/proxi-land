@@ -33,7 +33,7 @@ export default function Header() {
           </Button>
           <Button
             variant="outline"
-            className="md:hidden bg-transparent shadow-none text-black border-none px-[12px] py-sm hover:bg-primary hover:text-base-1"
+            className="md:hidden bg-transparent shadow-none text-black border-none px-[10px] py-sm hover:bg-primary hover:text-base-1"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle navigation"
           >

@@ -107,6 +107,26 @@ const tabs = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
     },
   ],
+  research: [
+    {
+      title: "Sales Automation",
+      icon: <ContentIcon />,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    },
+    {
+      title: "Lead Generation",
+      icon: <ThumbsUpIcon />,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    },
+    {
+      title: "Pipeline Management",
+      icon: <MailIcon />,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    },
+  ],
 };
 
 export const CasesSection = () => {
@@ -126,6 +146,7 @@ export const CasesSection = () => {
             <TabsTrigger value="hr">HR</TabsTrigger>
             <TabsTrigger value="operations">Operations</TabsTrigger>
             <TabsTrigger value="legal">Legal</TabsTrigger>
+            <TabsTrigger value="research">Research</TabsTrigger>
           </TabsList>
 
           {Object.entries(tabs).map(([category, items]) => (
