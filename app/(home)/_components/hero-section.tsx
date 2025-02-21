@@ -21,7 +21,7 @@ export const HeroSection = () => {
             <span className="block text-purple-600">at the speed of thought</span>
           </h1>
           <p className="max-w-2xl mx-auto">
-            Simply describe what you need, and Proximality's platform will build a
+            Simply describe what you need, and Proximality&#39;s platform will build a
             fully functional AI workforce that grows, performs, and helps with
             your business.
           </p>
