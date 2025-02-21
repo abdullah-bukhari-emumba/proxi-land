@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <Container>
       <div className="flex justify-between md:flex-nowrap flex-wrap gap-sm items-center mt-12 py-lg border-t text-sm">
-        <div>Copyright © Proximatly 2024. All rights reserved.</div>
+        <div>Copyright © Proximality 2025. All rights reserved.</div>
         <div className="flex gap-sm sm:flex-row flex-col">
           <a href="#" className="text-primary">
             Terms of Service
